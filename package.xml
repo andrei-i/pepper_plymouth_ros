@@ -1,13 +1,13 @@
 <package>
-  <name>pepper_plymouth_ros</name>
+  <name>pepper_snt_ros</name>
   <version>0.1.0</version>
   <description>
-      A set of launch files and configuration files to control Plymouth University's Pepper robot with ROS
+      A set of launch files and configuration files to control SNT's robot with ROS
   </description>
-  <maintainer email="severin.lemaignan@plymouth.ac.uk">Séverin Lemaignan</maintainer>
+  <maintainer email="andrei.ionescu.001@student.uni.lu">Andrei Ionescu</maintainer>
   <license>BSD</license>
 
-  <author>Severin Lemaignan</author>
+  <author>-</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
