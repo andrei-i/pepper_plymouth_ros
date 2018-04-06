@@ -6,4 +6,4 @@ local_costmap:
     height: 2.0
     resolution: 0.05
     map_type: costmap
-    observation_sources: laser_scan_sensor, depth_scan_sensor
+    observation_sources: laser_scan_sensor
