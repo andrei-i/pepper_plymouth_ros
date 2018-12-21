@@ -1,0 +1,24 @@
+<launch>
+
+  <!-- launch perception -->
+  <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
+    <remap from="image" to="/pepper_robot/naoqi_driver/camera/depth/image_raw" />
+    <remap from="scan" to="/pepper_robot/naoqi_driver/camera/depth/scan" />
+    <param name="output_frame_id" value="CameraDepth_frame" />
+    <param name="scan_height" value="10" />
+    <param name="range_max" value="3.0" />
+  </node>
+
+  <node pkg="laser_scan_proc" type="laser_filter" name="laser_filter" ns="pepper_robot/naoqi_driver">
+    <remap from="scan" to="/pepper_robot/naoqi_driver/camera/depth/scan" />
+    <remap from="scan/filtered" to="camera/depth/scan_filtered" />
+  </node>
+
+  <node pkg="laser_scan_proc" type="laser_merge" name="laser_merge" ns="pepper_robot/naoqi_driver">
+    <remap from="scan_2" to="/pepper_robot/naoqi_driver/camera/depth/scan_filtered" />
+    <remap from="scan_1" to="/pepper_robot/naoqi_driver/laser" />
+  </node>
+
+  <!--<node pkg="pepper_qut" type="head_stabilizer" name="head_stabilizer" />-->
+
+</launch>

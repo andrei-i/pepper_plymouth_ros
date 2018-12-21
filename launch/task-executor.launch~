@@ -1,0 +1,18 @@
+<launch>
+
+	<!-- roslaunch mongodb_store mongodb_store.launch db_path:=/home/robolab01/mongodb/pepper_snt/ -->
+	 <include file="$(find mongodb_store)/launch/mongodb_store.launch">
+		<arg name="db_path" value="/home/robolab01/mongodb/pepper_snt/" />
+
+	</include>
+
+	<!-- roslaunch task_executor task-scheduler.launch -->
+	<include file="$(find task_executor)/launch/task-scheduler-top.launch" />
+
+	<!-- roslaunch topological_navigation topological_navigation.launch map:=office_maps node_by_node:=false
+ -->
+ 	<include file="$(find topological_navigation)/launch/topological_navigation.launch">
+ 		<arg name="map" value="office_2" />
+ 		<param name="node_by_node" value="false" />
+ 	</include>
+</launch>

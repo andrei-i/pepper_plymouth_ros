@@ -13,7 +13,7 @@
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
 
   <include file="$(find pepper_snt_ros)/launch/amcl.launch">
-        <arg name="topic_scan" value="/pepper_robot/naoqi_driver/scan/merged" />
+        <arg name="topic_scan" value="/pepper_robot/naoqi_driver/laser" />
     </include>
 
 	 <include file="$(find pepper_snt_ros)/launch/perception.launch"/> -->

@@ -1,5 +1,5 @@
 base_global_planner: strands_navfn/NavfnROS
-controller_frequency: 8.0  # 8.0 control the base in hz
+controller_frequency: 9.0  # 8.0 control the base in hz
 controller_patience: 0.2   # 5.0 wait seconds for control
 planner_patience: 3.0      # 5.0 wait seconds for plan
 planner_frequency: 0.0     # 0.0 only plan on problems

@@ -1,12 +1,12 @@
-transform_tolerance: 1.
-max_obstacle_range: 2.0
+transform_tolerance: 0.5
+max_obstacle_range: 1.0
 raytrace_range: 4.0
 robot_base_frame: /base_footprint
 robot_radius: 0.30
-inflation_radius: 0.60
+inflation_radius: 0.40
 update_frequency: 5.0
 publish_frequency: 5.0
 cost_scaling_factor: 3.0
 observation_sources: laser_scan_sensor
-laser_scan_sensor: {sensor_frame: /base_footprint, data_type: LaserScan, topic: /pepper_robot/naoqi_driver/laser, marking: true, clearing: true}
-depth_scan_sensor: {sensor_frame: /base_footprint, data_type: PointCloud2, topic: /points, marking: true, clearing: true}
+laser_scan_sensor: {sensor_frame: /base_footprint, data_type: LaserScan, topic: /pepper_robot/naoqi_driver/scan/merged, marking: true, clearing: true}
+depth_scan_sensor: {sensor_frame: /base_footprint, data_type: PointCloud2, topic: /points, marking: true, clearing: true, min_obstacle_height: 0.1, max_obstacle_height: 2.0}
